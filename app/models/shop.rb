@@ -13,4 +13,8 @@
 #
 
 class Shop < ActiveRecord::Base
+  def generate_redirect_link(user_id)
+    "#{url}?subid=#{user_id}"
+  end
+
 end

@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
-  get 'shops/index'
-
-  get 'shops/show'
-
-  get 'shops/redirect'
+  resources :shops, only: [:index, :show] do
+    member do
+      get 'redirect'
+    end
+  end
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
