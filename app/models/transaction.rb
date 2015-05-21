@@ -11,4 +11,5 @@
 #
 
 class Transaction < ActiveRecord::Base
+  enum operation_type: [ :change_balance, :payment, :cashout ] # пополнение баланса, обновление баланса, доступного для вывода, вывод денег пользователем
 end
