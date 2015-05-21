@@ -9,7 +9,7 @@ https://developers.admitad.com/doc/api/methods/statistics/statistics-actions/
 Запись данных из API происходит через очередь сообщений (sidekiq) в таблицу actions. Для обращения по расписанию, используем gem clockwork (удобная замена cron). Для избежания дублирования записей в actions, используем external_id - на стороне admitad это action_id (либо order_id), а все операции с балансом пользователя записываются в таблицу transactions. Сама запись (в том числе, обновление баланса) оборачивается в транзакцию для обеспечения целостности данных.
 
 # Зависимости
-devise - регистрация, аутентификация пользователей
-httparty - wrapper для http-запросов к API
-sidekiq - очередь
-clockwork - scheduler
+* devise - регистрация, аутентификация пользователей
+* httparty - wrapper для http-запросов к API
+* sidekiq - очередь
+* clockwork - scheduler
